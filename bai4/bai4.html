@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Điện Thoại</title>
+    <style>
+        /* CSS đơn giản */
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { display: flex; gap: 30px; }
+        #addForm, #listContainer { border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        #listContainer { flex-grow: 1; }
+        .phone-item { margin-bottom: 5px; padding: 5px; border-bottom: 1px dashed #eee; font-size: small; }
+        input[type="text"], input[type="number"] { margin-bottom: 10px; width: 100%; padding: 5px; box-sizing: border-box; }
+        label { display: block; font-weight: bold; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Quản Lý Danh Sách Điện Thoại</h1>
+    
+    <div class="container">
+        
+        <div id="addForm">
+            <h2>➕ Thêm Mới Điện Thoại</h2>
+            <label for="maDienThoai">Mã điện thoại:</label>
+            <input type="text" id="maDienThoai" required>
+
+            <label for="ten">Tên:</label>
+            <input type="text" id="ten" required>
+
+            <label for="hangSanXuat">Hãng sản xuất:</label>
+            <input type="text" id="hangSanXuat" required>
+
+            <label for="gia">Giá (VND):</label>
+            <input type="number" id="gia" min="0" required>
+
+            <button onclick="addNewPhone()">Thêm Điện Thoại</button>
+        </div>
+
+        <div id="listContainer">
+            <h2>📋 Danh Sách Điện Thoại (Sắp xếp theo Tên)</h2>
+            <div id="phoneList"></div>
+        </div>
+
+    </div>
+
+    <script src="./bai4.js">
+    </script>
+</body>
+</html>
